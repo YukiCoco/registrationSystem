@@ -48,9 +48,10 @@
                                     <th>联系方式</th>
                                     <th>挂号科室</th>
                                     <th>挂号医生</th>
+                                    <th>挂号单状态</th>
                                     <th>预约时间</th>
                                     <th>挂号时间</th>
-                                    <th>挂号单状态</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody id="deptList">

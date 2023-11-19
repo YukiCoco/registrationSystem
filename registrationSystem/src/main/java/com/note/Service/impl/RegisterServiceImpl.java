@@ -13,11 +13,11 @@ public class RegisterServiceImpl implements RegisterService{
 	
 	@Autowired
 	private RegisterDao regDao;
-		//ĞÂÔöÔ¤Ô¼
+		//æ–°å¢é¢„çº¦
 		public int AddRegister(Register reg) {
 			return regDao.AddRegister(reg);
 		};
-		//»ñÈ¡ËùÓĞÔ¤Ô¼ĞÅÏ¢
+		//è·å–æ‰€æœ‰é¢„çº¦ä¿¡æ¯
 		public List<Register> getAllRegister(){
 			return regDao.getAllRegister();
 		};
@@ -25,15 +25,15 @@ public class RegisterServiceImpl implements RegisterService{
 		public List<Register> getAllRegisterByName(String hzUsername){
 			return regDao.getAllRegisterByName(hzUsername);
 		};
-		//¸üĞÂÔ¤Ô¼×´Ì¬
+		//æ›´æ–°é¢„çº¦çŠ¶æ€
 		public int UpdateghStatus(Register reg){
 			return regDao.UpdateghStatus(reg);
 		};
-		//É¾³ıÔ¤Ô¼¼ÇÂ¼
+		//åˆ é™¤é¢„çº¦è®°å½•
 		public int UpdateStatus(Register reg) {
 			return regDao.UpdateStatus(reg);
 		};
-		//¸ù¾İid²é¿´Ô¤Ô¼ĞÅÏ¢
+		//æ ¹æ®idæŸ¥çœ‹é¢„çº¦ä¿¡æ¯
 		public Register getRegById(Integer id) {
 			return regDao.getRegById(id);
 		};

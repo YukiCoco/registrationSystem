@@ -5,7 +5,7 @@ import java.util.List;
 import com.note.Model.User;
 
 /**
- * 描述:用户mapper接口
+ * 鎻忚堪:鐢ㄦ埛mapper鎺ュ彛
  * 
  */
 public interface UserDao {

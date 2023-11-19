@@ -21,7 +21,7 @@ public class UserController {
 	private UserService userService; 
 	
 	/**
-	 * µÇÂ½ 
+	 * ç™»é™† 
 	 * @param session
 	 * @param user
 	 * @return
@@ -33,15 +33,15 @@ public class UserController {
 		String username = user.getUsername();
 		String password = user.getPassword();
 	
-		System.out.println("´ÓÇ°¶Ë»ñÈ¡µÄĞÅÏ¢£º" + username +"__"+ password);
+		System.out.println("ä»å‰ç«¯è·å–çš„ä¿¡æ¯ï¼š" + username +"__"+ password);
 		
 		
 		String result = "";
 		try{
-			System.out.println("¿ªÊ¼Æô¶¯select");
+			System.out.println("å¼€å§‹å¯åŠ¨select");
 			User db_user = userService.selectUserByUsername(username);
 			String db_password = db_user.getPassword();
-			System.out.println("´ÓÊı¾İ¿â»ñÈ¡µÄpasswordÊÇ£º"+db_password);
+			System.out.println("ä»æ•°æ®åº“è·å–çš„passwordæ˜¯ï¼š"+db_password);
 			if(password.equals(db_password)==false) {
 				result = "error";
 			}else if(password.equals(db_password)==true) {
@@ -60,25 +60,25 @@ public class UserController {
 		
 		System.out.println(result);
 		
-	    //·µ»ØÒ»¸ömap	
+	    //è¿”å›ä¸€ä¸ªmap	
 	    return result;
 	}
 	
 	/**
-	 * ÍË³öµÇÂ½
+	 * é€€å‡ºç™»é™†
 	 * @param session
 	 * @return
 	 */
 	@RequestMapping("loginout.do")
 	public String loginout(HttpSession session){
-		//Çå³şsession
+		//æ¸…æ¥šsession
 		session.invalidate();
 		
 		return "redirect:index.do";
 	}
 	
 	/**
-	 * ×¢²á
+	 * æ³¨å†Œ
 	 * @param user
 	 * @return
 	 */
@@ -90,19 +90,19 @@ public class UserController {
 		String username = user.getUsername();
 		String password = user.getPassword();
 		String name = user.getName();
-		System.out.println("´ÓÇ°¶Ë»ñÈ¡µÄĞÅÏ¢£º" + username +"__"+ password +"__"+name);
+		System.out.println("ä»å‰ç«¯è·å–çš„ä¿¡æ¯ï¼š" + username +"__"+ password +"__"+name);
 		
 		try{
-			System.out.println("¿ªÊ¼Æô¶¯insert");
+			System.out.println("å¼€å§‹å¯åŠ¨insert");
 			User db_user = userService.selectUserByUsername(username);
 			Integer id = db_user.getUser_id();
-			//²éÑ¯µ½Êı¾İ ·µ»ØÇ°Ì¨ÕËºÅÒÑ´æÔÚ
+			//æŸ¥è¯¢åˆ°æ•°æ® è¿”å›å‰å°è´¦å·å·²å­˜åœ¨
 			if(id != null) {
 				result = "exists";
 			}
 		}catch(Exception e) {
-			//²éÑ¯²»µ½Êı¾İÊ± ²åÈëÊı¾İ
-			System.out.println("¿ªÊ¼insert½øÊı¾İ¿â");
+			//æŸ¥è¯¢ä¸åˆ°æ•°æ®æ—¶ æ’å…¥æ•°æ®
+			System.out.println("å¼€å§‹insertè¿›æ•°æ®åº“");
 			userService.AddUser(user);
 			int pid = user.getUser_id();
 			System.out.println(pid);
@@ -122,7 +122,7 @@ public class UserController {
 		try{
 			User db_user = userService.selectUserByUsername(username);
 			Integer id = db_user.getUser_id();
-			//²éÑ¯µ½Êı¾İ ·µ»ØÇ°Ì¨ÕËºÅÒÑ´æÔÚ
+			//æŸ¥è¯¢åˆ°æ•°æ® è¿”å›å‰å°è´¦å·å·²å­˜åœ¨
 			if(id != null) {
 				userData = db_user;
 			}
@@ -139,7 +139,7 @@ public class UserController {
 	}
 	
 	/**
-	 * ¸üĞÂÃÜÂë
+	 * æ›´æ–°å¯†ç 
 	 * @param user
 	 * @return
 	 */
@@ -152,15 +152,15 @@ public class UserController {
 		String password = user.getPassword();
 		String name = user.getName();
 		
-		System.out.println("´ÓÇ°¶Ë»ñÈ¡µÄĞÅÏ¢£º" + username +"__"+ password +"__"+name);
+		System.out.println("ä»å‰ç«¯è·å–çš„ä¿¡æ¯ï¼š" + username +"__"+ password +"__"+name);
 		
 		try {
-			System.out.println("¿ªÊ¼Æô¶¯update");
+			System.out.println("å¼€å§‹å¯åŠ¨update");
 			int id = userService.updateUserByUsername(user);
 			System.out.println(id);
 			result = "success";
 		}catch(Exception e) {
-			//²éÑ¯²»µ½Êı¾İÊ± ²åÈëÊı¾İ
+			//æŸ¥è¯¢ä¸åˆ°æ•°æ®æ—¶ æ’å…¥æ•°æ®
 			result = "error";
 			
 		}

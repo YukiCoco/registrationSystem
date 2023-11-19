@@ -31,8 +31,8 @@
                 <h1 class="logo-name">H+</h1>
 
             </div>
-            <h3>欢迎注册 H+</h3>
-            <p>创建一个H+新账户</p>
+            <h3>欢迎注册 【医院挂号系统】</h3>
+            <p>创建一个新账户</p>
             <form class="m-t" role="form" action="login.html">
                 <div class="form-group">
                     <input id="username" type="text" class="form-control" placeholder="请输入用户名" required="">
@@ -54,7 +54,7 @@
                 </div>
                 <button type="button" class="btn btn-primary block full-width m-b" onclick="register()">注 册</button>
 
-                <p class="text-muted text-center"><small>已经有账户了？</small><a href="login.html">点此登录</a>
+                <p class="text-muted text-center"><small>已经有账户了？</small><a href="login.jsp">点此登录</a>
                 </p>
 
             </form>

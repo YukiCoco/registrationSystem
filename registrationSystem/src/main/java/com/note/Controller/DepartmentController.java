@@ -24,17 +24,17 @@ public class DepartmentController {
 		String deptName = dept.getDepartmentName();
 		
 		try{
-			System.out.println("¿ªÊ¼Æô¶¯insert");
+			System.out.println("å¼€å§‹å¯åŠ¨insert");
 			Department Dept = deptService.selectDeptByName(deptName);
 			System.out.println(Dept);
 			Integer id = Dept.getDepartmentId();
-			//²éÑ¯µ½Êı¾İ ·µ»ØÇ°Ì¨ÕËºÅÒÑ´æÔÚ
+			//æŸ¥è¯¢åˆ°æ•°æ® è¿”å›å‰å°è´¦å·å·²å­˜åœ¨
 			if(id != null) {
 				result = "exists";
 			}
 		}catch(Exception e) {
-			//²éÑ¯²»µ½Êı¾İÊ± ²åÈëÊı¾İ
-			System.out.println("¿ªÊ¼insert½øÊı¾İ¿â");
+			//æŸ¥è¯¢ä¸åˆ°æ•°æ®æ—¶ æ’å…¥æ•°æ®
+			System.out.println("å¼€å§‹insertè¿›æ•°æ®åº“");
 			deptService.AddDepartment(dept);
 			int pid = dept.getDepartmentId();
 			System.out.println(pid);
@@ -53,7 +53,7 @@ public class DepartmentController {
 		try{
 			deptList = deptService.getAllDeptInfo();
 			Integer length = deptList.size();
-			//²éÑ¯µ½Êı¾İ ·µ»ØÇ°Ì¨ÕËºÅÒÑ´æÔÚ
+			//æŸ¥è¯¢åˆ°æ•°æ® è¿”å›å‰å°è´¦å·å·²å­˜åœ¨
 			if(length > 0) {
 				return deptList;
 			}

@@ -2,10 +2,10 @@ package com.note.Model;
 
 public class Department {
 	
-	private String departmentName;//¿ÆÊÒÃû×Ö
-	private String departmentDes;//¿ÆÊÒÃèÊö
-	private Integer departmentId;//¿ÆÊÒid
-	private String departmentArea;//¿ÆÊÒÎ»ÖÃ
+	private String departmentName;//ç§‘å®¤åå­—
+	private String departmentDes;//ç§‘å®¤æè¿°
+	private Integer departmentId;//ç§‘å®¤id
+	private String departmentArea;//ç§‘å®¤ä½ç½®
 	
 	public String getDepartmentArea() {
 		return departmentArea;

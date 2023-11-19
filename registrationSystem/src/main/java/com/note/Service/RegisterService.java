@@ -5,15 +5,15 @@ import java.util.List;
 import com.note.Model.Register;
 
 public interface RegisterService {
-		//ĞÂÔöÔ¤Ô¼
+		//æ–°å¢é¢„çº¦
 		int AddRegister(Register reg);
-		//»ñÈ¡ËùÓĞÔ¤Ô¼ĞÅÏ¢
+		//è·å–æ‰€æœ‰é¢„çº¦ä¿¡æ¯
 		List<Register> getAllRegister();
-		//¸üĞÂÔ¤Ô¼×´Ì¬
+		//æ›´æ–°é¢„çº¦çŠ¶æ€
 		int UpdateghStatus(Register reg);
-		//É¾³ıÔ¤Ô¼¼ÇÂ¼
+		//åˆ é™¤é¢„çº¦è®°å½•
 		int UpdateStatus(Register reg);
-		//¸ù¾İid²é¿´Ô¤Ô¼ĞÅÏ¢
+		//æ ¹æ®idæŸ¥çœ‹é¢„çº¦ä¿¡æ¯
 		Register getRegById(Integer id);
 		
 		List<Register> getAllRegisterByName(String hzUsername);

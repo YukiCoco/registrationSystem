@@ -2,13 +2,13 @@ package com.note.Model;
 
 public class Doctor {
 	
-	private Integer doctorId;//Ò½Éúid
-	private Integer deptId;//¿ÆÊÒid
+	private Integer doctorId;//åŒ»ç”Ÿid
+	private Integer deptId;//ç§‘å®¤id
 	private String deptName;
-	private String doctorName;//Ò½ÉúÃû×Ö
-	private String doctorDes;//Ò½Éú½éÉÜ
-	private Integer workStatus;//ÉÏ°à×´Ì¬
-	private String workTime;//ÉÏ°àÊ±¼ä
+	private String doctorName;//åŒ»ç”Ÿåå­—
+	private String doctorDes;//åŒ»ç”Ÿä»‹ç»
+	private Integer workStatus;//ä¸Šç­çŠ¶æ€
+	private String workTime;//ä¸Šç­æ—¶é—´
 	
 	public Integer getDoctorId() {
 		return doctorId;

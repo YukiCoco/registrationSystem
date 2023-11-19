@@ -8,13 +8,13 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * 登录认证的拦截器
+ * 鐧诲綍璁よ瘉鐨勬嫤鎴櫒
  */
 public class LoginInterceptor implements HandlerInterceptor{
 
  
 	/**
-	 * Handler执行完成之后调用这个方法
+	 * Handler鎵ц瀹屾垚涔嬪悗璋冪敤杩欎釜鏂规硶
 	 */
 	public void afterCompletion(HttpServletRequest request,
 			HttpServletResponse response, Object handler, Exception exc)
@@ -24,7 +24,7 @@ public class LoginInterceptor implements HandlerInterceptor{
 
 
 	/**
-	 * Handler执行之后，ModelAndView返回之前调用这个方法
+	 * Handler鎵ц涔嬪悗锛孧odelAndView杩斿洖涔嬪墠璋冪敤杩欎釜鏂规硶
 	 */
 
 	public void postHandle(HttpServletRequest request, HttpServletResponse response,
@@ -35,7 +35,7 @@ public class LoginInterceptor implements HandlerInterceptor{
  
 
 	/**
-	 * Handler执行之前调用这个方法
+	 * Handler鎵ц涔嬪墠璋冪敤杩欎釜鏂规硶
 	 */
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
 			Object handler) throws Exception {

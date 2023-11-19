@@ -114,7 +114,7 @@
     <!-- 自定义js -->
     <script src="../../static/js/hAdmin.js?v=4.1.0"></script>
     <script type="text/javascript" src="../../static/js/index.js"></script>
-    <script type="text/javascript" src="../static/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../static/js/jquery.cookie.js"></script>
 
     <!-- 第三方插件 -->
     <script src="../../static/js/plugins/pace/pace.min.js"></script>

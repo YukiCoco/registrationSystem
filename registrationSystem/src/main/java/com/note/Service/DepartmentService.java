@@ -5,17 +5,17 @@ import java.util.List;
 import com.note.Model.Department;
 
 public interface DepartmentService {
-	//ĞÂÔö¿ÆÊÒ
+	//æ–°å¢ç§‘å®¤
 	int AddDepartment(Department dept);
-	//¼ìË÷¿ÆÊÒ
+	//æ£€ç´¢ç§‘å®¤
 	Department selectDeptByName(String deptName);
-	//¸üĞÂ¿ÆÊÒÉèÖÃ
+	//æ›´æ–°ç§‘å®¤è®¾ç½®
 	int updateDeptByDept(Department dept);
-	//»ñÈ¡ËùÓĞ¿ÆÊÒ
+	//è·å–æ‰€æœ‰ç§‘å®¤
 	List getAllDeptInfo();
-	//»ñÈ¡µ¥¸ö¿ÆÊÒ
+	//è·å–å•ä¸ªç§‘å®¤
 	Department getDeptById(Integer id);
-	//¸üĞÂ¿ÆÊÒĞÅÏ¢
+	//æ›´æ–°ç§‘å®¤ä¿¡æ¯
 	int updateDept(Department dept);
 	//
 	int updateDeptStatus(Department dept);

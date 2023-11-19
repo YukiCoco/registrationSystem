@@ -24,7 +24,7 @@ public class RegisterController {
 		String result = "";
 		
 		try{
-			System.out.println("¿ªÊ¼Æô¶¯insert");
+			System.out.println("å¼€å§‹å¯åŠ¨insert");
 			int id = regService.AddRegister(reg);
 			if(id > 0) {
 				result = "success";
@@ -45,7 +45,7 @@ public class RegisterController {
 		try{
 			regList = regService.getAllRegister();
 			Integer length = regList.size();
-			//²éÑ¯µ½Êı¾İ ·µ»ØÇ°Ì¨ÕËºÅÒÑ´æÔÚ
+			//æŸ¥è¯¢åˆ°æ•°æ® è¿”å›å‰å°è´¦å·å·²å­˜åœ¨
 			if(length > 0) {
 				return regList;
 			}
@@ -64,7 +64,7 @@ public class RegisterController {
 		try{
 			regList = regService.getAllRegisterByName(hzUsername);
 			Integer length = regList.size();
-			//²éÑ¯µ½Êı¾İ ·µ»ØÇ°Ì¨ÕËºÅÒÑ´æÔÚ
+			//æŸ¥è¯¢åˆ°æ•°æ® è¿”å›å‰å°è´¦å·å·²å­˜åœ¨
 			if(length > 0) {
 				return regList;
 			}

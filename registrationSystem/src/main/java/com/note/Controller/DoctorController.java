@@ -25,16 +25,16 @@ public class DoctorController {
 		String docName = doc.getDoctorName();
 		
 		try{
-			System.out.println("¿ªÊ¼Æô¶¯insert");
+			System.out.println("å¼€å§‹å¯åŠ¨insert");
 			Doctor doc1 = docService.selectDoctorByName(docName);
 			Integer id = doc1.getDoctorId();
-			//²éÑ¯µ½Êı¾İ ·µ»ØÇ°Ì¨ÕËºÅÒÑ´æÔÚ
+			//æŸ¥è¯¢åˆ°æ•°æ® è¿”å›å‰å°è´¦å·å·²å­˜åœ¨
 			if(id != null) {
 				result = "exists";
 			}
 		}catch(Exception e) {
-			//²éÑ¯²»µ½Êı¾İÊ± ²åÈëÊı¾İ
-			System.out.println("¿ªÊ¼insert½øÊı¾İ¿â");
+			//æŸ¥è¯¢ä¸åˆ°æ•°æ®æ—¶ æ’å…¥æ•°æ®
+			System.out.println("å¼€å§‹insertè¿›æ•°æ®åº“");
 			docService.AddDoctor(doc);
 			int pid = doc.getDoctorId();
 			System.out.println(pid);
@@ -53,7 +53,7 @@ public class DoctorController {
 		try{
 			doctList = docService.getAllDoctorInfo();
 			Integer length = doctList.size();
-			//²éÑ¯µ½Êı¾İ ·µ»ØÇ°Ì¨ÕËºÅÒÑ´æÔÚ
+			//æŸ¥è¯¢åˆ°æ•°æ® è¿”å›å‰å°è´¦å·å·²å­˜åœ¨
 			if(length > 0) {
 				return doctList;
 			}
@@ -142,7 +142,7 @@ public class DoctorController {
 		try{
 			doctList = docService.getDoctorByDeptId(id);
 			Integer length = doctList.size();
-			//²éÑ¯µ½Êı¾İ ·µ»ØÇ°Ì¨ÕËºÅÒÑ´æÔÚ
+			//æŸ¥è¯¢åˆ°æ•°æ® è¿”å›å‰å°è´¦å·å·²å­˜åœ¨
 			if(length > 0) {
 				return doctList;
 			}

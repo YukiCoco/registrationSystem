@@ -181,7 +181,8 @@
 				var timestamp =now.getTime();
 				var registerTime = new Date(time).getTime();
 				var cha = timestamp - registerTime;
-				if(cha > =0){
+				console.log(cha);
+				if(cha >= 0){
 					layer.msg("对不起，请预约今天之后的时间");
 				}
 				var week = getMyDay(new Date(time));
